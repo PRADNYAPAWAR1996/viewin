@@ -4,46 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="mystyle4.css">
 </head>
-<style>  .topnav input[type=text] {
-    border: 1px solid #ccc;  
-    align-items: center;
-    margin-left: 400px;
-    width:600px;
-    height:30px;
-    margin-right: -300px;
-  }
-  #d2{background-color: #efeff5;}
-  .navbar {
-  overflow: hidden;
-  background-color:wheat;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin-top: 200px;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color:black;
-  margin-left: 200px;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background: white;
-  color: black;
-}
-
-.navbar a.active {
-  background-color:white;
-  color: orange;
-}
-
+<style> 
 
 
   </style>
@@ -52,6 +15,12 @@
     <p id="p1" style="font-size: large;margin-left: 50px;">Select city</p>
     <p id="p2" style="font-size: larger;color: purple;margin-left: 50px;">Krishna Tower,Kolshet Rd,...</p>
     <h2 id="h1" style="text-align: center;font-size: 35px;">Avail best healthcare and pay using 0% EMI's</h2>
+    <div class="myVideo">
+      <video autoplay muted loop id="myVideo" width="300px" height="300px">
+        <source src="d:\healthcare.mp4" type="video/mp4">
+        <button id="myBtn" onclick="myFunction()">Pause</button>
+                
+    </div>
     <div class="topnav">
         <input type="text" placeholder="search for 'Dermatologists'">
     </div>
@@ -78,6 +47,21 @@
                       <a href="account">Account</a>
                     </div>
                     
-                   
+                    
+                  
+                  <script>
+                  var video = document.getElementById("myVideo");
+                  var btn = document.getElementById("myBtn");
+                  
+                  function myFunction() {
+                    if (video.paused) {
+                      video.play();
+                      btn.innerHTML = "Pause";
+                    } else {
+                      video.pause();
+                      btn.innerHTML = "Play";
+                    }
+                  }
+                  </script>        
 </body>
 </html>
